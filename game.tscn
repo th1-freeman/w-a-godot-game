@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://byng8fnvp0544"]
+
+[ext_resource type="Texture2D" uid="uid://be7kyc5axaciw" path="res://kenney_tiny-dungeon/Tiles/tile_0085.png" id="1_80nbo"]
+[ext_resource type="Script" uid="uid://g2cgrwm8d4d8" path="res://player.gd" id="1_e2o6t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ncdou"]
+size = Vector2(56, 56)
+
+[node name="Node2D" type="Node2D" unique_id=388778872]
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=568492474]
+position = Vector2(489, 373)
+script = ExtResource("1_e2o6t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1102824683]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_ncdou")
+
+[node name="Tile0085" type="Sprite2D" parent="Player" unique_id=662273848]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("1_80nbo")

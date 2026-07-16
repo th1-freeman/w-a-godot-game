@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://s6fhjymnakef" path="res://ASSETS/player.tscn" id="1_80nbo"]
 [ext_resource type="Texture2D" uid="uid://po6qf8n40ah8" path="res://kenney_tiny-dungeon/Tilemap/tilemap_packed.png" id="1_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://duxrbkf1d1vsn" path="res://ASSETS/enemy.tscn" id="3_feb5d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_feb5d"]
 texture = ExtResource("1_e2o6t")
@@ -156,3 +157,6 @@ tile_set = SubResource("TileSet_ncdou")
 
 [node name="Player" parent="." unique_id=1752552021 instance=ExtResource("1_80nbo")]
 position = Vector2(486, 486)
+
+[node name="Enemy" parent="." unique_id=384714988 groups=["Enemy"] instance=ExtResource("3_feb5d")]
+position = Vector2(333, 382)

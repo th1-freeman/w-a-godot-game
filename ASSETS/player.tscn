@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://s6fhjymnakef"]
 
-[ext_resource type="Script" uid="uid://g2cgrwm8d4d8" path="res://player.gd" id="1_qffm5"]
+[ext_resource type="Script" uid="uid://g2cgrwm8d4d8" path="res://SCRIPTS/player.gd" id="1_qffm5"]
 [ext_resource type="Texture2D" uid="uid://be7kyc5axaciw" path="res://kenney_tiny-dungeon/Tiles/tile_0085.png" id="2_j1pnl"]
+[ext_resource type="Script" uid="uid://bu0o54ii73lp2" path="res://SCRIPTS/area_2d.gd" id="3_j1pnl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ncdou"]
 size = Vector2(56, 56)
@@ -19,6 +20,11 @@ scale = Vector2(4, 4)
 texture = ExtResource("2_j1pnl")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1287690587]
+script = ExtResource("3_j1pnl")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=100678462]
 polygon = PackedVector2Array(0, 0, 500, 200, 500, -200)
+
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

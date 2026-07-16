@@ -156,7 +156,10 @@ tile_map_data = PackedByteArray("AAAAAAAAAAAEAAEAAFABAAAAAAABAAEAAGACAAAAAAABAAE
 tile_set = SubResource("TileSet_ncdou")
 
 [node name="Player" parent="." unique_id=1752552021 instance=ExtResource("1_80nbo")]
-position = Vector2(486, 486)
+position = Vector2(267, 480)
 
 [node name="Enemy" parent="." unique_id=384714988 groups=["Enemy"] instance=ExtResource("3_feb5d")]
 position = Vector2(333, 382)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=31432947]
+color = Color(0.0142752165, 0.014275219, 0.014275211, 1)

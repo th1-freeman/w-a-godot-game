@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://g2cgrwm8d4d8" path="res://SCRIPTS/player.gd" id="1_qffm5"]
 [ext_resource type="Texture2D" uid="uid://be7kyc5axaciw" path="res://kenney_tiny-dungeon/Tiles/tile_0085.png" id="2_j1pnl"]
 [ext_resource type="Script" uid="uid://bu0o54ii73lp2" path="res://SCRIPTS/area_2d.gd" id="3_j1pnl"]
+[ext_resource type="Texture2D" uid="uid://buasle84w2rap" path="res://cone.png" id="4_8ttly"]
+[ext_resource type="Texture2D" uid="uid://c51rs2iggq532" path="res://circle.png" id="5_ergxw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ncdou"]
 size = Vector2(56, 56)
@@ -20,10 +22,19 @@ scale = Vector2(4, 4)
 texture = ExtResource("2_j1pnl")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1287690587]
+position = Vector2(51, 0)
 script = ExtResource("3_j1pnl")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=100678462]
 polygon = PackedVector2Array(0, 0, 500, 200, 500, -200)
+
+[node name="PointLight2D" type="PointLight2D" parent="Area2D" unique_id=1391597552]
+texture_filter = 1
+position = Vector2(251, 0)
+texture = ExtResource("4_8ttly")
+
+[node name="PointLight2D2" type="PointLight2D" parent="." unique_id=1914417977]
+texture = ExtResource("5_ergxw")
 
 [connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

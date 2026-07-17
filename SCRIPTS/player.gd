@@ -16,6 +16,11 @@ func _physics_process(delta: float) -> void:
 		Sprite.rotation_degrees = 10*sin(Angular_Frequency*Time.get_ticks_msec())
 	else:
 		Sprite.rotation_degrees = 0
-	move_and_slide()
+	
+	var collision = move_and_collide(velocity*delta)
+	
+	if collision:
+		if collision.get_collider().is_in_group("Enemy"):
+			get_tree().change_scene_to_file("res://ASSETS/menu.tscn")
 	
 	Viewcone.look_at(get_global_mouse_position())

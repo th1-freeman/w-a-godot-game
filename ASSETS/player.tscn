@@ -22,13 +22,13 @@ scale = Vector2(4, 4)
 texture = ExtResource("2_j1pnl")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1287690587]
-position = Vector2(51, 0)
 script = ExtResource("3_j1pnl")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=100678462]
+position = Vector2(53, 0)
 polygon = PackedVector2Array(0, 0, 500, 200, 500, -200)
 
-[node name="PointLight2D" type="PointLight2D" parent="Area2D" unique_id=1391597552]
+[node name="PointLight2D" type="PointLight2D" parent="Area2D/CollisionPolygon2D" unique_id=1391597552]
 texture_filter = 1
 position = Vector2(251, 0)
 texture = ExtResource("4_8ttly")

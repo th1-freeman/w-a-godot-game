@@ -1,3 +1,3 @@
-#Game inspired by the weeping angels of Doctor Who
+## Game inspired by the weeping angels of Doctor Who
 
--> Asset Credits: www.kenney.nl/assets/tinydungeon
+-> Asset Credits: www.kenney.nl/assets/tiny-dungeon

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cqx27sdpgviuv"]
+
+[ext_resource type="Texture2D" uid="uid://cucobna5va52e" path="res://kenney_tiny-dungeon/Tiles/tile_0084.png" id="1_kfjqq"]
+[ext_resource type="Script" uid="uid://bcsgu07n5eeh1" path="res://SCRIPTS/button.gd" id="2_kku5c"]
+
+[node name="Node2D" type="Node2D" unique_id=1732747544]
+
+[node name="Control" type="Control" parent="." unique_id=133421253]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control" unique_id=2870720]
+layout_mode = 0
+offset_left = 369.0
+offset_top = 501.0
+offset_right = 588.0
+offset_bottom = 597.0
+theme_override_font_sizes/font_size = 64
+text = "START"
+icon = ExtResource("1_kfjqq")
+script = ExtResource("2_kku5c")
+
+[connection signal="pressed" from="Control/Button" to="Control/Button" method="_on_pressed"]

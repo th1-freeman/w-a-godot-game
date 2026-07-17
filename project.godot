@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="weeping angels"
-run/main_scene="uid://byng8fnvp0544"
+run/main_scene="uid://cqx27sdpgviuv"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 

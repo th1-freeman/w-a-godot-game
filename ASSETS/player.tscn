@@ -7,13 +7,13 @@
 [ext_resource type="Texture2D" uid="uid://c51rs2iggq532" path="res://circle.png" id="5_ergxw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ncdou"]
-size = Vector2(56, 56)
+size = Vector2(48, 52)
 
 [node name="Player" type="CharacterBody2D" unique_id=1752552021]
 script = ExtResource("1_qffm5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=981231893]
-position = Vector2(0, 4)
+position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_ncdou")
 
 [node name="Tile0085" type="Sprite2D" parent="." unique_id=862820990]

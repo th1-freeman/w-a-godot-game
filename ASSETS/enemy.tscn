@@ -4,14 +4,14 @@
 [ext_resource type="Script" uid="uid://c2vj1l6bj1v25" path="res://SCRIPTS/enemy.gd" id="1_n18vj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_802pu"]
-size = Vector2(56, 56)
+size = Vector2(48, 52)
 
-[node name="Enemy" type="CharacterBody2D" unique_id=384714988]
+[node name="Enemy" type="CharacterBody2D" unique_id=384714988 groups=["Enemy"]]
 script = ExtResource("1_n18vj")
 SPEED = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1890955750]
-position = Vector2(0, 4)
+position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_802pu")
 
 [node name="Tile0121" type="Sprite2D" parent="." unique_id=1912070906]
